@@ -1,0 +1,191 @@
+/* CONFIGURAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    color: #e2e8f0;
+    background: radial-gradient(circle at 80% 25%, rgba(246, 222, 6, 0.05), transparent 45%),
+                linear-gradient(135deg, #0f1115 0%, #171a21 55%, #1e222b 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CABEÇALHO */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(12, 14, 18, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.abas {
+    display: flex;
+    gap: 28px;
+}
+
+.abas a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.abas a:hover,
+.abas a.ativo {
+    color: #f6de06;
+    border-bottom-color: #f6de06;
+}
+
+/* CONTAINER PRINCIPAL */
+.autor-container {
+    flex: 1;
+    display: flex;
+    gap: 48px;
+    max-width: 1150px;
+    width: 100%;
+    margin: 45px auto;
+    padding: 0 24px;
+    align-items: flex-start;
+}
+
+/* TEXTO */
+.autor-conteudo {
+    flex: 1;
+    max-width: 68ch;
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.autor-conteudo h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.datas-vida {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.introducao {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #f1f5f9;
+    margin-bottom: 28px;
+}
+
+.autor-conteudo h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 28px 0 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: 8px;
+}
+
+/* BIOGRÁFICA */
+.timeline {
+    border-left: 2px solid rgba(246, 222, 6, 0.35);
+    padding-left: 22px;
+    margin-left: 6px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -29px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #a8a8a2;
+    box-shadow: 0 0 10px rgba(185, 184, 173, 0.6);
+}
+
+.timeline-ano {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #faf8f8;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.timeline-item p {
+    font-size: 15.5px;
+    color: #cbd5e1;
+    margin-bottom: 0;
+}
+
+/* IMAGEM */
+.autor-imagem-wrapper {
+    width: 400px;
+    flex-shrink: 0;
+    padding: 1px;
+    border-radius: 16px;
+    text-align: center;
+    position: sticky;
+    top: 100px;
+}
+
+.autor-foto {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.legenda-foto {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 24px;
+    background: #0a0b0e;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    font-size: 13px;
+}
+

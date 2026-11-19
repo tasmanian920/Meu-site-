@@ -1,0 +1,186 @@
+/* CONFIGURAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    color: #e2e8f0;
+    background: radial-gradient(circle at 85% 25%, rgba(246, 222, 6, 0.06), transparent 45%),
+                linear-gradient(135deg, #0f1115 0%, #171a21 55%, #1e222b 100%);
+    min-height: 100vh;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CABEÇALHO */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(12, 14, 18, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.abas {
+    display: flex;
+    gap: 28px;
+}
+
+.abas a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.abas a:hover,
+.abas a.ativo {
+    color: #f6de06;
+    border-bottom-color: #f6de06;
+}
+
+/* LAYOUT EM COLUNAS */
+.main-container {
+    flex: 1;
+    max-width: 1150px;
+    width: 100%;
+    margin: 45px auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+/* LADO ESQUERDO: TEXTO */
+.conteudo-texto {
+    flex: 1;
+    max-width: 68ch;
+}
+
+.conteudo-texto h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.subtitulo-autor {
+    font-size: 16px;
+    color: #cbd5e1;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.data-publicacao {
+    display: block;
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 24px;
+}
+
+.caixa-destaque {
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 4px solid #f6de06;
+    padding: 18px 22px;
+    border-radius: 0 12px 12px 0;
+    font-size: 16px;
+    color: #f8fafc;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.conteudo-texto h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    color: #ffffff;
+    margin: 36px 0 14px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.conteudo-texto p {
+    margin-bottom: 18px;
+    font-size: 16px;
+    color: #cbd5e1;
+    text-align: left;
+}
+
+/* LADO DIREITO: IMAGEM */
+.coluna-imagem {
+    width: 320px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px;
+}
+
+.card-livro {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 14px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6),
+                0 0 30px rgba(246, 222, 6, 0.1);
+}
+
+.capa-livro {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 24px;
+    background: #0a0b0e;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 850px) {
+    .topo {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .main-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .coluna-imagem {
+        position: static;
+        width: 260px;
+    }
+}
+
+
